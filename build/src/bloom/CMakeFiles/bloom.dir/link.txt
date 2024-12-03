@@ -1,0 +1,2 @@
+/usr/bin/ar qc /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libbloom.a CMakeFiles/bloom.dir/bloom.cc.o
+/usr/bin/ranlib /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libbloom.a

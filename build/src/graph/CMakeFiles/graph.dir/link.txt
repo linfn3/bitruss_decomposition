@@ -1,0 +1,2 @@
+/usr/bin/ar qc /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libgraph.a CMakeFiles/graph.dir/edge.cc.o CMakeFiles/graph.dir/graph.cc.o CMakeFiles/graph.dir/graph_batch.cc.o
+/usr/bin/ranlib /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libgraph.a
