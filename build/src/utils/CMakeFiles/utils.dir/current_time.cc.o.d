@@ -1,7 +1,7 @@
 src/utils/CMakeFiles/utils.dir/current_time.cc.o: \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/utils/current_time.cc \
+ /mnt/d/Mywork/bitruss-decomposition-main/src/utils/current_time.cc \
  /usr/include/stdc-predef.h \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/utils/current_time.h \
+ /mnt/d/Mywork/bitruss-decomposition-main/include/utils/current_time.h \
  /usr/include/x86_64-linux-gnu/sys/time.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

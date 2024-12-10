@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src
+# Install script for directory: /mnt/d/Mywork/bitruss-decomposition-main/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,11 +44,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/main/cmake_install.cmake")
-  include("/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/utils/cmake_install.cmake")
-  include("/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/graph/cmake_install.cmake")
-  include("/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/bloom/cmake_install.cmake")
-  include("/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/factory/cmake_install.cmake")
+  include("/mnt/d/Mywork/bitruss-decomposition-main/build/src/main/cmake_install.cmake")
+  include("/mnt/d/Mywork/bitruss-decomposition-main/build/src/utils/cmake_install.cmake")
+  include("/mnt/d/Mywork/bitruss-decomposition-main/build/src/graph/cmake_install.cmake")
+  include("/mnt/d/Mywork/bitruss-decomposition-main/build/src/bloom/cmake_install.cmake")
+  include("/mnt/d/Mywork/bitruss-decomposition-main/build/src/factory/cmake_install.cmake")
 
 endif()
 

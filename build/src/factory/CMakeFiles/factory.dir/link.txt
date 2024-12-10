@@ -1,2 +1,2 @@
-/usr/bin/ar qc /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libfactory.a CMakeFiles/factory.dir/factory.cc.o
-/usr/bin/ranlib /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libfactory.a
+/usr/bin/ar qc /mnt/d/Mywork/bitruss-decomposition-main/lib/libfactory.a CMakeFiles/factory.dir/factory.cc.o
+/usr/bin/ranlib /mnt/d/Mywork/bitruss-decomposition-main/lib/libfactory.a

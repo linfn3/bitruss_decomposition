@@ -78,7 +78,7 @@ void Graph::construct_index() {
     std::vector<int> bloomNumber;
     int u, v, w;
     int *lastUseVertex = new int[n], *lastCount = new int[n],
-        *visitedStatusForW = new int[n];
+            *visitedStatusForW = new int[n];
     std::memset(lastCount, 0, sizeof(int) * n);
     std::memset(visitedStatusForW, -1, sizeof(int) * n);
 
@@ -121,9 +121,9 @@ void Graph::construct_index() {
                     continue;
                 if (visitedStatusForW[w] == -1) {
                     ui indexV = edge[e[u][i]].add_host_bloom_and_twin_edge(
-                        bloomCount, e[v][j]);
+                            bloomCount, e[v][j]);
                     ui indexU = edge[e[v][j]].add_host_bloom_and_twin_edge(
-                        bloomCount, e[u][i]);
+                            bloomCount, e[u][i]);
                     edge[e[u][i]].add_host_bloom_index_of_twin_edge(indexU);
                     edge[e[v][j]].add_host_bloom_index_of_twin_edge(indexV);
                     bloomNumber.emplace_back(lastCountNumber);
@@ -131,9 +131,9 @@ void Graph::construct_index() {
                 } else {
 
                     ui indexV = edge[e[u][i]].add_host_bloom_and_twin_edge(
-                        visitedStatusForW[w], e[v][j]);
+                            visitedStatusForW[w], e[v][j]);
                     ui indexU = edge[e[v][j]].add_host_bloom_and_twin_edge(
-                        visitedStatusForW[w], e[u][i]);
+                            visitedStatusForW[w], e[u][i]);
                     edge[e[u][i]].add_host_bloom_index_of_twin_edge(indexU);
                     edge[e[v][j]].add_host_bloom_index_of_twin_edge(indexV);
                 }
@@ -178,7 +178,7 @@ void Graph::construct_index() {
         int slackValue = currentEdge->get_slack_value();
         maxSlackValue = std::max(maxSlackValue, currentEdge->get_slack_value());
         maxButterflySupport =
-            std::max(maxButterflySupport, currentEdge->get_butterfly_support());
+                std::max(maxButterflySupport, currentEdge->get_butterfly_support());
     }
     extraBloom.id = bloomCount;
     extraBloom.bloomNumber = maxButterflySupport;
@@ -232,19 +232,33 @@ void Graph::remove_edge_from_extra_bloom_by_index(pair_t index) {
 
 void Graph::remove_bloom_from_edge_by_index(long long edgeID, ui index) {
     affect_bloom_t affectBloomInfo =
-        edge[edgeID].remove_host_bloom_by_index(index);
+            edge[edgeID].remove_host_bloom_by_index(index);
     if (std::get<0>(affectBloomInfo) == -1) {
         return;
     } else {
         if (std::get<1>(affectBloomInfo).first != -1)
             bloom[std::get<0>(affectBloomInfo)].set_reverse_index_by_index(
-                std::get<1>(affectBloomInfo), index);
+                    std::get<1>(affectBloomInfo), index);
         edge[std::get<2>(affectBloomInfo)].set_twin_index_by_index(
-            std::get<3>(affectBloomInfo), index);
+                std::get<3>(affectBloomInfo), index);
     }
 }
 
 void Graph::bitruss_decomposition() {
+    /*
+    std::ofstream fout;
+    fout.open("../dataset/marvel/temp.txt", std::ios::out);
+    for(int i = 0;i < bloomCount;i++){
+        fout<<"bloomid:"<<bloom[i].id<<", size:"<<bloom[i].bloomNumber<<std::endl;
+    }
+
+    fout.close();
+    fout.open("../dataset/marvel/temp2.txt", std::ios::out);
+    for(int i = 0;i < m;i++){
+        fout<<"edgeID:"<<i<<", size:"<<edge[i].get_butterfly_support()<<" ,hostbloom:"<<edge[i].get_host_bloom_number()<<std::endl;
+    }
+    fout.close();
+    */
     long long visitedEdge = 0;
     std::vector<long long> peelList;
     std::vector<long long> peelListTmp;
@@ -288,7 +302,7 @@ void Graph::peel_edge(long long edgeID, std::vector<long long> &peelList) {
         int bloomID = peelEdge->get_host_bloom_id_by_index(i);
         TwinInfo twinEdgeInfo = peelEdge->get_twin_edge_info_by_index(i);
         pair_t reverseIndex =
-            peelEdge->get_reverse_index_in_host_bloom_by_index(i);
+                peelEdge->get_reverse_index_in_host_bloom_by_index(i);
         auto *currentBloom = &bloom[bloomID];
         int bloomNumber = currentBloom->bloomNumber;
         long long twinEdgeID = twinEdgeInfo.twinEdgeID;
@@ -297,14 +311,14 @@ void Graph::peel_edge(long long edgeID, std::vector<long long> &peelList) {
 
         ui indexInTwinEdge = twinEdgeInfo.hostBloomIndex;
         pair_t indexInHostBloom =
-            edge[twinEdgeID].get_reverse_index_in_host_bloom_by_index(
-                indexInTwinEdge);
+                edge[twinEdgeID].get_reverse_index_in_host_bloom_by_index(
+                        indexInTwinEdge);
 
         if (bloomNumber <= 1) {
             remove_edge_from_bloom_by_index(bloomID, indexInHostBloom);
             remove_bloom_from_edge_by_index(twinEdgeID, indexInTwinEdge);
             edge[twinEdgeID].decrease_butterfly_support(
-                currentBloom->get_counter());
+                    currentBloom->get_counter());
             currentBloom->bloomNumber--;
             continue;
         }
@@ -315,14 +329,15 @@ void Graph::peel_edge(long long edgeID, std::vector<long long> &peelList) {
         remove_edge_from_bloom_by_index(bloomID, indexInHostBloom);
         remove_bloom_from_edge_by_index(twinEdgeID, indexInTwinEdge);
         edge[twinEdgeID].decrease_butterfly_support(
-            currentBloom->get_counter() + bloomNumber - 1);
+                currentBloom->get_counter() + bloomNumber - 1);
         if (edge[twinEdgeID].check_maturity()) {
             check_mature_edge(twinEdgeID, peelList);
         }
 
         currentBloom->bloomNumber--;
         std::vector<long long> matureList;
-        currentBloom->send_value_to_member(1, matureList, edge);
+        int bucket = log2_32(currentBloom->get_counter()+1);
+        currentBloom->send_value_to_member_1(bucket,matureList, edge);
         currentBloom->increse_counter(1);
         for (ui j = 0; j < matureList.size(); j++) {
             long long currentEdgeID = matureList[j];
@@ -335,7 +350,7 @@ int Graph::collect_counter(long long edgeID) {
     int counter = 0;
     for (ui i = 0; i < edge[edgeID].get_host_bloom_number(); i++) {
         counter +=
-            bloom[edge[edgeID].get_host_bloom_id_by_index(i)].get_counter();
+                bloom[edge[edgeID].get_host_bloom_id_by_index(i)].get_counter();
     }
     return counter;
 }
@@ -345,7 +360,7 @@ void Graph::compute_and_restart(long long edgeID, const int trackValue) {
     for (ui i = 0; i < edge[edgeID].get_host_bloom_number(); i++) {
         int bloomID = edge[edgeID].get_host_bloom_id_by_index(i);
         pair_t reverseIndex =
-            edge[edgeID].get_reverse_index_in_host_bloom_by_index(i);
+                edge[edgeID].get_reverse_index_in_host_bloom_by_index(i);
         remove_edge_from_bloom_by_index(bloomID, reverseIndex);
         pair_t index = bloom[bloomID].add_member_edge(edgeID, i, edge);
         edge[edgeID].set_reverse_index_by_index(i, index);
@@ -367,7 +382,7 @@ void Graph::check_mature_edge(long long edgeID,
         peelList.emplace_back(edgeID);
     } else {
         compute_and_restart(edgeID, edge[edgeID].get_butterfly_support() -
-                                        counterSum - extraBloom.get_counter());
+                                    counterSum - extraBloom.get_counter());
     }
 }
 

@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/graph/edge.cc" "src/graph/CMakeFiles/graph.dir/edge.cc.o" "gcc" "src/graph/CMakeFiles/graph.dir/edge.cc.o.d"
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/graph/graph.cc" "src/graph/CMakeFiles/graph.dir/graph.cc.o" "gcc" "src/graph/CMakeFiles/graph.dir/graph.cc.o.d"
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/graph/graph_batch.cc" "src/graph/CMakeFiles/graph.dir/graph_batch.cc.o" "gcc" "src/graph/CMakeFiles/graph.dir/graph_batch.cc.o.d"
+  "/mnt/d/Mywork/bitruss-decomposition-main/src/graph/edge.cc" "src/graph/CMakeFiles/graph.dir/edge.cc.o" "gcc" "src/graph/CMakeFiles/graph.dir/edge.cc.o.d"
+  "/mnt/d/Mywork/bitruss-decomposition-main/src/graph/graph.cc" "src/graph/CMakeFiles/graph.dir/graph.cc.o" "gcc" "src/graph/CMakeFiles/graph.dir/graph.cc.o.d"
+  "/mnt/d/Mywork/bitruss-decomposition-main/src/graph/graph_batch.cc" "src/graph/CMakeFiles/graph.dir/graph_batch.cc.o" "gcc" "src/graph/CMakeFiles/graph.dir/graph_batch.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

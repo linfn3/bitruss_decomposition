@@ -1,5 +1,5 @@
 src/main/CMakeFiles/run.dir/main.cc.o: \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/main/main.cc \
+ /mnt/d/Mywork/bitruss-decomposition-main/src/main/main.cc \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -145,8 +145,8 @@ src/main/CMakeFiles/run.dir/main.cc.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/factory/factory.h \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/graph/graph.h \
+ /mnt/d/Mywork/bitruss-decomposition-main/include/factory/factory.h \
+ /mnt/d/Mywork/bitruss-decomposition-main/include/graph/graph.h \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
@@ -165,18 +165,18 @@ src/main/CMakeFiles/run.dir/main.cc.o: \
  /usr/include/c++/13/bits/locale_conv.h \
  /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/sstream \
  /usr/include/c++/13/bits/sstream.tcc \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/bloom/bloom.h \
+ /mnt/d/Mywork/bitruss-decomposition-main/include/bloom/bloom.h \
  /usr/include/c++/13/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/graph/edge.h \
+ /mnt/d/Mywork/bitruss-decomposition-main/include/graph/edge.h \
  /usr/include/c++/13/tuple /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/utils/current_time.h \
+ /mnt/d/Mywork/bitruss-decomposition-main/include/utils/current_time.h \
  /usr/include/x86_64-linux-gnu/sys/time.h \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/graph/graph_batch.h \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/utils/flags.h
+ /mnt/d/Mywork/bitruss-decomposition-main/include/graph/graph_batch.h \
+ /mnt/d/Mywork/bitruss-decomposition-main/include/utils/flags.h

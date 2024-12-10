@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libutils.a"
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libutils.pdb"
+  "/mnt/d/Mywork/bitruss-decomposition-main/lib/libutils.a"
+  "/mnt/d/Mywork/bitruss-decomposition-main/lib/libutils.pdb"
   "CMakeFiles/utils.dir/current_time.cc.o"
   "CMakeFiles/utils.dir/current_time.cc.o.d"
   "CMakeFiles/utils.dir/flags.cc.o"

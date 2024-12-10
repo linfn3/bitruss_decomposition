@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main
+# Install script for directory: /mnt/d/Mywork/bitruss-decomposition-main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/cmake_install.cmake")
+  include("/mnt/d/Mywork/bitruss-decomposition-main/build/src/cmake_install.cmake")
 
 endif()
 
@@ -56,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/d/Mywork/bitruss-decomposition-main/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

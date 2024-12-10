@@ -1,2 +1,2 @@
-/usr/bin/ar qc /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libutils.a CMakeFiles/utils.dir/current_time.cc.o CMakeFiles/utils.dir/flags.cc.o
-/usr/bin/ranlib /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libutils.a
+/usr/bin/ar qc /mnt/d/Mywork/bitruss-decomposition-main/lib/libutils.a CMakeFiles/utils.dir/current_time.cc.o CMakeFiles/utils.dir/flags.cc.o
+/usr/bin/ranlib /mnt/d/Mywork/bitruss-decomposition-main/lib/libutils.a

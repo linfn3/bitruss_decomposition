@@ -40,7 +40,7 @@ pair_t Bloom::add_member_edge(long long edgeID, ui indexInMemberEdge,
     int slackValue = edge[edgeID].get_slack_value();
     if (slackValue >= bloomNumber)
         return std::make_pair(-1, 0);
-    int bucket = log2_32(slackValue);
+    int bucket = log2_32(slackValue+counter);
     memberEdge[bucket].emplace_back(edgeID);
     reverseIndexInMemberEdge[bucket].emplace_back(indexInMemberEdge);
     return std::make_pair(bucket, memberEdge[bucket].size() - 1);
@@ -72,7 +72,7 @@ void Bloom::send_value_to_member(int deltaValue,
         }
         int sendValue = 1;
         sendValue +=
-            (counter + deltaValue - (base + 1) * bucketValue) / bucketValue;
+                (counter + deltaValue - (base + 1) * bucketValue) / bucketValue;
         for (ui i = 0; i < memberEdge[bucket].size(); i++) {
             long long edgeID = memberEdge[bucket][i];
             edge[edgeID].accumulate_value(sendValue);
@@ -83,6 +83,30 @@ void Bloom::send_value_to_member(int deltaValue,
         bucket++;
         bucketValue <<= 1;
     }
+}
+
+
+void Bloom::send_value_to_member_1(int bucket, std::vector<long long> &matureList,
+                                 Edge *edge) {
+        if(bucket > memberEdge.size()){
+            return;
+        }
+
+        //std::cout<<"id:"<<id<<"bucketsize:"<<memberEdge[bucket].size();
+        for (ui i = 0; i < memberEdge[bucket].size(); i++) {
+        //std::cout<<memberEdge.size()<<std::endl;
+        //std::cout<<"bucket:"<<bucket<<" i:"<<i<<std::endl;
+
+        long long edgeID = memberEdge[bucket][i];
+        //std::cout<<edgeID<<std::endl;
+        edge[edgeID].accumulate_value(1);
+
+        if (edge[edgeID].check_maturity()) {
+            matureList.emplace_back(edgeID);
+        }
+    }
+
+
 }
 
 void Bloom::send_value_to_member(int deltaValue,
@@ -102,7 +126,7 @@ void Bloom::send_value_to_member(int deltaValue,
         }
         int sendValue = 1;
         sendValue +=
-            (counter + deltaValue - (base + 1) * bucketValue) / bucketValue;
+                (counter + deltaValue - (base + 1) * bucketValue) / bucketValue;
         for (ui i = 0; i < memberEdge[bucket].size(); i++) {
             long long edgeID = memberEdge[bucket][i];
             edge[edgeID].accumulate_value(sendValue);
@@ -126,7 +150,7 @@ void Bloom::send_value_to_member(int deltaValue, pair_t index, Edge *edge) {
     }
     int sendValue = 1;
     sendValue +=
-        (counter + deltaValue - (base + 1) * bucketValue) / bucketValue;
+            (counter + deltaValue - (base + 1) * bucketValue) / bucketValue;
     long long edgeID = memberEdge[index.first][index.second];
     edge[edgeID].accumulate_value(sendValue);
 }

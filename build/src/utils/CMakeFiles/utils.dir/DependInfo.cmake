@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/utils/current_time.cc" "src/utils/CMakeFiles/utils.dir/current_time.cc.o" "gcc" "src/utils/CMakeFiles/utils.dir/current_time.cc.o.d"
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/utils/flags.cc" "src/utils/CMakeFiles/utils.dir/flags.cc.o" "gcc" "src/utils/CMakeFiles/utils.dir/flags.cc.o.d"
+  "/mnt/d/Mywork/bitruss-decomposition-main/src/utils/current_time.cc" "src/utils/CMakeFiles/utils.dir/current_time.cc.o" "gcc" "src/utils/CMakeFiles/utils.dir/current_time.cc.o.d"
+  "/mnt/d/Mywork/bitruss-decomposition-main/src/utils/flags.cc" "src/utils/CMakeFiles/utils.dir/flags.cc.o" "gcc" "src/utils/CMakeFiles/utils.dir/flags.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

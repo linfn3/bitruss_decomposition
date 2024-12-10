@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main
+CMAKE_SOURCE_DIR = /mnt/d/Mywork/bitruss-decomposition-main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build
+CMAKE_BINARY_DIR = /mnt/d/Mywork/bitruss-decomposition-main/build
 
 # Include any dependencies generated for this target.
 include src/main/CMakeFiles/run.dir/depend.make
@@ -70,18 +70,18 @@ include src/main/CMakeFiles/run.dir/progress.make
 include src/main/CMakeFiles/run.dir/flags.make
 
 src/main/CMakeFiles/run.dir/main.cc.o: src/main/CMakeFiles/run.dir/flags.make
-src/main/CMakeFiles/run.dir/main.cc.o: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/main/main.cc
+src/main/CMakeFiles/run.dir/main.cc.o: /mnt/d/Mywork/bitruss-decomposition-main/src/main/main.cc
 src/main/CMakeFiles/run.dir/main.cc.o: src/main/CMakeFiles/run.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/main/CMakeFiles/run.dir/main.cc.o"
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/main && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/main/CMakeFiles/run.dir/main.cc.o -MF CMakeFiles/run.dir/main.cc.o.d -o CMakeFiles/run.dir/main.cc.o -c /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/main/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/d/Mywork/bitruss-decomposition-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/main/CMakeFiles/run.dir/main.cc.o"
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build/src/main && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/main/CMakeFiles/run.dir/main.cc.o -MF CMakeFiles/run.dir/main.cc.o.d -o CMakeFiles/run.dir/main.cc.o -c /mnt/d/Mywork/bitruss-decomposition-main/src/main/main.cc
 
 src/main/CMakeFiles/run.dir/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/run.dir/main.cc.i"
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/main && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/main/main.cc > CMakeFiles/run.dir/main.cc.i
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build/src/main && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Mywork/bitruss-decomposition-main/src/main/main.cc > CMakeFiles/run.dir/main.cc.i
 
 src/main/CMakeFiles/run.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/run.dir/main.cc.s"
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/main && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/main/main.cc -o CMakeFiles/run.dir/main.cc.s
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build/src/main && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Mywork/bitruss-decomposition-main/src/main/main.cc -o CMakeFiles/run.dir/main.cc.s
 
 # Object files for target run
 run_OBJECTS = \
@@ -90,27 +90,28 @@ run_OBJECTS = \
 # External object files for target run
 run_EXTERNAL_OBJECTS =
 
-/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run: src/main/CMakeFiles/run.dir/main.cc.o
-/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run: src/main/CMakeFiles/run.dir/build.make
-/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libutils.a
-/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libgraph.a
-/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libbloom.a
-/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libfactory.a
-/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libgraph.a
-/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libutils.a
-/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run: src/main/CMakeFiles/run.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run"
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run.dir/link.txt --verbose=$(VERBOSE)
+/mnt/d/Mywork/bitruss-decomposition-main/bin/run: src/main/CMakeFiles/run.dir/main.cc.o
+/mnt/d/Mywork/bitruss-decomposition-main/bin/run: src/main/CMakeFiles/run.dir/build.make
+/mnt/d/Mywork/bitruss-decomposition-main/bin/run: /mnt/d/Mywork/bitruss-decomposition-main/lib/libutils.a
+/mnt/d/Mywork/bitruss-decomposition-main/bin/run: /mnt/d/Mywork/bitruss-decomposition-main/lib/libgraph.a
+/mnt/d/Mywork/bitruss-decomposition-main/bin/run: /mnt/d/Mywork/bitruss-decomposition-main/lib/libbloom.a
+/mnt/d/Mywork/bitruss-decomposition-main/bin/run: /mnt/d/Mywork/bitruss-decomposition-main/lib/libfactory.a
+/mnt/d/Mywork/bitruss-decomposition-main/bin/run: /mnt/d/Mywork/bitruss-decomposition-main/lib/libgraph.a
+/mnt/d/Mywork/bitruss-decomposition-main/bin/run: /mnt/d/Mywork/bitruss-decomposition-main/lib/libbloom.a
+/mnt/d/Mywork/bitruss-decomposition-main/bin/run: /mnt/d/Mywork/bitruss-decomposition-main/lib/libutils.a
+/mnt/d/Mywork/bitruss-decomposition-main/bin/run: src/main/CMakeFiles/run.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/d/Mywork/bitruss-decomposition-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /mnt/d/Mywork/bitruss-decomposition-main/bin/run"
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build/src/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/run.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-src/main/CMakeFiles/run.dir/build: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run
+src/main/CMakeFiles/run.dir/build: /mnt/d/Mywork/bitruss-decomposition-main/bin/run
 .PHONY : src/main/CMakeFiles/run.dir/build
 
 src/main/CMakeFiles/run.dir/clean:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/main && $(CMAKE_COMMAND) -P CMakeFiles/run.dir/cmake_clean.cmake
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build/src/main && $(CMAKE_COMMAND) -P CMakeFiles/run.dir/cmake_clean.cmake
 .PHONY : src/main/CMakeFiles/run.dir/clean
 
 src/main/CMakeFiles/run.dir/depend:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/main /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/main /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/main/CMakeFiles/run.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/Mywork/bitruss-decomposition-main /mnt/d/Mywork/bitruss-decomposition-main/src/main /mnt/d/Mywork/bitruss-decomposition-main/build /mnt/d/Mywork/bitruss-decomposition-main/build/src/main /mnt/d/Mywork/bitruss-decomposition-main/build/src/main/CMakeFiles/run.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/main/CMakeFiles/run.dir/depend
 

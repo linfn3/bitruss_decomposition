@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/utils
+# Install script for directory: /mnt/d/Mywork/bitruss-decomposition-main/src/utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

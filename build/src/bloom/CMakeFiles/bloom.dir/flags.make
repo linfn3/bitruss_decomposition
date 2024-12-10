@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include
+CXX_INCLUDES = -I/mnt/d/Mywork/bitruss-decomposition-main/include
 
 CXX_FLAGS = -std=gnu++14
 

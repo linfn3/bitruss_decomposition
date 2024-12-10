@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/bloom/bloom.cc" "src/bloom/CMakeFiles/bloom.dir/bloom.cc.o" "gcc" "src/bloom/CMakeFiles/bloom.dir/bloom.cc.o.d"
+  "/mnt/d/Mywork/bitruss-decomposition-main/src/bloom/bloom.cc" "src/bloom/CMakeFiles/bloom.dir/bloom.cc.o" "gcc" "src/bloom/CMakeFiles/bloom.dir/bloom.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libbloom.a"
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libbloom.pdb"
+  "/mnt/d/Mywork/bitruss-decomposition-main/lib/libbloom.a"
+  "/mnt/d/Mywork/bitruss-decomposition-main/lib/libbloom.pdb"
   "CMakeFiles/bloom.dir/bloom.cc.o"
   "CMakeFiles/bloom.dir/bloom.cc.o.d"
 )

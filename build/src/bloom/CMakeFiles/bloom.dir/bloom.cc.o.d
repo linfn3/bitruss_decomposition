@@ -1,7 +1,7 @@
 src/bloom/CMakeFiles/bloom.dir/bloom.cc.o: \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/bloom/bloom.cc \
+ /mnt/d/Mywork/bitruss-decomposition-main/src/bloom/bloom.cc \
  /usr/include/stdc-predef.h \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/bloom/bloom.h \
+ /mnt/d/Mywork/bitruss-decomposition-main/include/bloom/bloom.h \
  /usr/include/c++/13/cstdint \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -22,7 +22,7 @@ src/bloom/CMakeFiles/bloom.dir/bloom.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/graph/edge.h \
+ /mnt/d/Mywork/bitruss-decomposition-main/include/graph/edge.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/c++/13/ostream /usr/include/c++/13/ios \
  /usr/include/c++/13/iosfwd /usr/include/c++/13/bits/stringfwd.h \

@@ -1,0 +1,20 @@
+# ninja log v6
+27	377	7549216425748886	src/utils/CMakeFiles/utils.dir/flags.cc.obj	951053478474687d
+53	1464	7549216426018039	src/graph/CMakeFiles/graph.dir/graph.cc.obj	7dd843c3894249db
+109	1445	7549216426574325	src/bloom/CMakeFiles/bloom.dir/bloom.cc.obj	937572b6b24cbd21
+14	741	7549216425622702	src/utils/CMakeFiles/utils.dir/current_time.cc.obj	2b24450165a192b1
+744	1014	7549216432926357	D:/Mywork/bitruss-decomposition-main/lib/libutils.a	1899541474737e2f
+134	1203	7549216426824316	src/factory/CMakeFiles/factory.dir/factory.cc.obj	ffc67c5cf6ea77d2
+151	1215	7549216426994321	src/main/CMakeFiles/run.dir/main.cc.obj	65cc757cfc8aa023
+40	1307	7549216425884541	src/graph/CMakeFiles/graph.dir/edge.cc.obj	23dc7e8b2129e6ed
+71	1426	7549216426198029	src/graph/CMakeFiles/graph.dir/graph_batch.cc.obj	93b989c22892b346
+1445	1601	7549216439940383	D:/Mywork/bitruss-decomposition-main/lib/libbloom.a	9ac97a1f869b99a2
+1464	1677	7549216440130374	D:/Mywork/bitruss-decomposition-main/lib/libgraph.a	94fe7561165c56a6
+5	469	7553437542726176	build.ninja	ef4052e24cf40eb3
+1677	1832	7549216442257913	D:/Mywork/bitruss-decomposition-main/lib/libfactory.a	4e095fb5656f5cb
+67	1295	7553910070511841	src/main/CMakeFiles/run.dir/main.cc.obj	65cc757cfc8aa023
+33	1493	7553910070178451	src/graph/CMakeFiles/graph.dir/edge.cc.obj	23dc7e8b2129e6ed
+16	1540	7553910069999361	src/bloom/CMakeFiles/bloom.dir/bloom.cc.obj	937572b6b24cbd21
+49	1708	7553910070331954	src/graph/CMakeFiles/graph.dir/graph.cc.obj	7dd843c3894249db
+1540	4217	7553910085247645	D:/Mywork/bitruss-decomposition-main/lib/libbloom.a	9ac97a1f869b99a2
+4217	4552	7553910112019552	D:/Mywork/bitruss-decomposition-main/lib/libgraph.a	94fe7561165c56a6

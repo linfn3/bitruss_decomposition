@@ -7,10 +7,10 @@ using namespace std;
 
 int main(int argc, char **argv) {
     //gflags::ParseCommandLineFlags(&argc, &argv, true);
-    auto filepath = "../dataset/github";
+    auto filepath = "../dataset/marvel";
     auto *factory = new GraphFactory();
     auto *graph = factory->generate_graph(filepath, "standard");
     graph->construct_index();
     graph->bitruss_decomposition();
-    graph->output_bitruss_number("../dataset/github");
+    graph->output_bitruss_number("../dataset/marvel");
 }

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libgraph.a"
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/lib/libgraph.pdb"
+  "/mnt/d/Mywork/bitruss-decomposition-main/lib/libgraph.a"
+  "/mnt/d/Mywork/bitruss-decomposition-main/lib/libgraph.pdb"
   "CMakeFiles/graph.dir/edge.cc.o"
   "CMakeFiles/graph.dir/edge.cc.o.d"
   "CMakeFiles/graph.dir/graph.cc.o"

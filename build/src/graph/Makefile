@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main
+CMAKE_SOURCE_DIR = /mnt/d/Mywork/bitruss-decomposition-main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build
+CMAKE_BINARY_DIR = /mnt/d/Mywork/bitruss-decomposition-main/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/CMakeFiles /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/graph//CMakeFiles/progress.marks
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/graph/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/CMakeFiles 0
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Mywork/bitruss-decomposition-main/build/CMakeFiles /mnt/d/Mywork/bitruss-decomposition-main/build/src/graph//CMakeFiles/progress.marks
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/graph/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Mywork/bitruss-decomposition-main/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/graph/clean
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/graph/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/graph/preinstall
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/graph/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/graph/preinstall
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/graph/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/graph/CMakeFiles/graph.dir/rule:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/graph/CMakeFiles/graph.dir/rule
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/graph/CMakeFiles/graph.dir/rule
 .PHONY : src/graph/CMakeFiles/graph.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ graph: src/graph/CMakeFiles/graph.dir/rule
 
 # fast build rule for target.
 graph/fast:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/build
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/build
 .PHONY : graph/fast
 
 edge.o: edge.cc.o
@@ -135,7 +135,7 @@ edge.o: edge.cc.o
 
 # target to build an object file
 edge.cc.o:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/edge.cc.o
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/edge.cc.o
 .PHONY : edge.cc.o
 
 edge.i: edge.cc.i
@@ -143,7 +143,7 @@ edge.i: edge.cc.i
 
 # target to preprocess a source file
 edge.cc.i:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/edge.cc.i
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/edge.cc.i
 .PHONY : edge.cc.i
 
 edge.s: edge.cc.s
@@ -151,7 +151,7 @@ edge.s: edge.cc.s
 
 # target to generate assembly for a file
 edge.cc.s:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/edge.cc.s
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/edge.cc.s
 .PHONY : edge.cc.s
 
 graph.o: graph.cc.o
@@ -159,7 +159,7 @@ graph.o: graph.cc.o
 
 # target to build an object file
 graph.cc.o:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph.cc.o
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph.cc.o
 .PHONY : graph.cc.o
 
 graph.i: graph.cc.i
@@ -167,7 +167,7 @@ graph.i: graph.cc.i
 
 # target to preprocess a source file
 graph.cc.i:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph.cc.i
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph.cc.i
 .PHONY : graph.cc.i
 
 graph.s: graph.cc.s
@@ -175,7 +175,7 @@ graph.s: graph.cc.s
 
 # target to generate assembly for a file
 graph.cc.s:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph.cc.s
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph.cc.s
 .PHONY : graph.cc.s
 
 graph_batch.o: graph_batch.cc.o
@@ -183,7 +183,7 @@ graph_batch.o: graph_batch.cc.o
 
 # target to build an object file
 graph_batch.cc.o:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph_batch.cc.o
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph_batch.cc.o
 .PHONY : graph_batch.cc.o
 
 graph_batch.i: graph_batch.cc.i
@@ -191,7 +191,7 @@ graph_batch.i: graph_batch.cc.i
 
 # target to preprocess a source file
 graph_batch.cc.i:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph_batch.cc.i
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph_batch.cc.i
 .PHONY : graph_batch.cc.i
 
 graph_batch.s: graph_batch.cc.s
@@ -199,7 +199,7 @@ graph_batch.s: graph_batch.cc.s
 
 # target to generate assembly for a file
 graph_batch.cc.s:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph_batch.cc.s
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/graph/CMakeFiles/graph.dir/build.make src/graph/CMakeFiles/graph.dir/graph_batch.cc.s
 .PHONY : graph_batch.cc.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main
+CMAKE_SOURCE_DIR = /mnt/d/Mywork/bitruss-decomposition-main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build
+CMAKE_BINARY_DIR = /mnt/d/Mywork/bitruss-decomposition-main/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/CMakeFiles /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/main//CMakeFiles/progress.marks
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/main/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/CMakeFiles 0
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Mywork/bitruss-decomposition-main/build/CMakeFiles /mnt/d/Mywork/bitruss-decomposition-main/build/src/main//CMakeFiles/progress.marks
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/main/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Mywork/bitruss-decomposition-main/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/main/clean
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/main/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/main/preinstall
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/main/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/main/preinstall
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/main/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/main/CMakeFiles/run.dir/rule:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/main/CMakeFiles/run.dir/rule
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/main/CMakeFiles/run.dir/rule
 .PHONY : src/main/CMakeFiles/run.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ run: src/main/CMakeFiles/run.dir/rule
 
 # fast build rule for target.
 run/fast:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/main/CMakeFiles/run.dir/build.make src/main/CMakeFiles/run.dir/build
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/main/CMakeFiles/run.dir/build.make src/main/CMakeFiles/run.dir/build
 .PHONY : run/fast
 
 main.o: main.cc.o
@@ -135,7 +135,7 @@ main.o: main.cc.o
 
 # target to build an object file
 main.cc.o:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/main/CMakeFiles/run.dir/build.make src/main/CMakeFiles/run.dir/main.cc.o
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/main/CMakeFiles/run.dir/build.make src/main/CMakeFiles/run.dir/main.cc.o
 .PHONY : main.cc.o
 
 main.i: main.cc.i
@@ -143,7 +143,7 @@ main.i: main.cc.i
 
 # target to preprocess a source file
 main.cc.i:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/main/CMakeFiles/run.dir/build.make src/main/CMakeFiles/run.dir/main.cc.i
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/main/CMakeFiles/run.dir/build.make src/main/CMakeFiles/run.dir/main.cc.i
 .PHONY : main.cc.i
 
 main.s: main.cc.s
@@ -151,7 +151,7 @@ main.s: main.cc.s
 
 # target to generate assembly for a file
 main.cc.s:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/main/CMakeFiles/run.dir/build.make src/main/CMakeFiles/run.dir/main.cc.s
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/main/CMakeFiles/run.dir/build.make src/main/CMakeFiles/run.dir/main.cc.s
 .PHONY : main.cc.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

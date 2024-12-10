@@ -1,50 +1,50 @@
 [
 {
-  "directory": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/main",
-  "command": "/usr/bin/c++  -I/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/run.dir/main.cc.o -c /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/main/main.cc",
-  "file": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/main/main.cc",
+  "directory": "/mnt/d/Mywork/bitruss-decomposition-main/build/src/main",
+  "command": "/usr/bin/c++  -I/mnt/d/Mywork/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/run.dir/main.cc.o -c /mnt/d/Mywork/bitruss-decomposition-main/src/main/main.cc",
+  "file": "/mnt/d/Mywork/bitruss-decomposition-main/src/main/main.cc",
   "output": "src/main/CMakeFiles/run.dir/main.cc.o"
 },
 {
-  "directory": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/utils",
-  "command": "/usr/bin/c++  -I/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/utils.dir/current_time.cc.o -c /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/utils/current_time.cc",
-  "file": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/utils/current_time.cc",
+  "directory": "/mnt/d/Mywork/bitruss-decomposition-main/build/src/utils",
+  "command": "/usr/bin/c++  -I/mnt/d/Mywork/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/utils.dir/current_time.cc.o -c /mnt/d/Mywork/bitruss-decomposition-main/src/utils/current_time.cc",
+  "file": "/mnt/d/Mywork/bitruss-decomposition-main/src/utils/current_time.cc",
   "output": "src/utils/CMakeFiles/utils.dir/current_time.cc.o"
 },
 {
-  "directory": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/utils",
-  "command": "/usr/bin/c++  -I/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/utils.dir/flags.cc.o -c /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/utils/flags.cc",
-  "file": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/utils/flags.cc",
+  "directory": "/mnt/d/Mywork/bitruss-decomposition-main/build/src/utils",
+  "command": "/usr/bin/c++  -I/mnt/d/Mywork/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/utils.dir/flags.cc.o -c /mnt/d/Mywork/bitruss-decomposition-main/src/utils/flags.cc",
+  "file": "/mnt/d/Mywork/bitruss-decomposition-main/src/utils/flags.cc",
   "output": "src/utils/CMakeFiles/utils.dir/flags.cc.o"
 },
 {
-  "directory": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/graph",
-  "command": "/usr/bin/c++  -I/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/graph.dir/edge.cc.o -c /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/graph/edge.cc",
-  "file": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/graph/edge.cc",
+  "directory": "/mnt/d/Mywork/bitruss-decomposition-main/build/src/graph",
+  "command": "/usr/bin/c++  -I/mnt/d/Mywork/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/graph.dir/edge.cc.o -c /mnt/d/Mywork/bitruss-decomposition-main/src/graph/edge.cc",
+  "file": "/mnt/d/Mywork/bitruss-decomposition-main/src/graph/edge.cc",
   "output": "src/graph/CMakeFiles/graph.dir/edge.cc.o"
 },
 {
-  "directory": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/graph",
-  "command": "/usr/bin/c++  -I/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/graph.dir/graph.cc.o -c /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/graph/graph.cc",
-  "file": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/graph/graph.cc",
+  "directory": "/mnt/d/Mywork/bitruss-decomposition-main/build/src/graph",
+  "command": "/usr/bin/c++  -I/mnt/d/Mywork/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/graph.dir/graph.cc.o -c /mnt/d/Mywork/bitruss-decomposition-main/src/graph/graph.cc",
+  "file": "/mnt/d/Mywork/bitruss-decomposition-main/src/graph/graph.cc",
   "output": "src/graph/CMakeFiles/graph.dir/graph.cc.o"
 },
 {
-  "directory": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/graph",
-  "command": "/usr/bin/c++  -I/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/graph.dir/graph_batch.cc.o -c /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/graph/graph_batch.cc",
-  "file": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/graph/graph_batch.cc",
+  "directory": "/mnt/d/Mywork/bitruss-decomposition-main/build/src/graph",
+  "command": "/usr/bin/c++  -I/mnt/d/Mywork/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/graph.dir/graph_batch.cc.o -c /mnt/d/Mywork/bitruss-decomposition-main/src/graph/graph_batch.cc",
+  "file": "/mnt/d/Mywork/bitruss-decomposition-main/src/graph/graph_batch.cc",
   "output": "src/graph/CMakeFiles/graph.dir/graph_batch.cc.o"
 },
 {
-  "directory": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/bloom",
-  "command": "/usr/bin/c++  -I/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/bloom.dir/bloom.cc.o -c /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/bloom/bloom.cc",
-  "file": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/bloom/bloom.cc",
+  "directory": "/mnt/d/Mywork/bitruss-decomposition-main/build/src/bloom",
+  "command": "/usr/bin/c++  -I/mnt/d/Mywork/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/bloom.dir/bloom.cc.o -c /mnt/d/Mywork/bitruss-decomposition-main/src/bloom/bloom.cc",
+  "file": "/mnt/d/Mywork/bitruss-decomposition-main/src/bloom/bloom.cc",
   "output": "src/bloom/CMakeFiles/bloom.dir/bloom.cc.o"
 },
 {
-  "directory": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/factory",
-  "command": "/usr/bin/c++  -I/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/factory.dir/factory.cc.o -c /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/factory/factory.cc",
-  "file": "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/factory/factory.cc",
+  "directory": "/mnt/d/Mywork/bitruss-decomposition-main/build/src/factory",
+  "command": "/usr/bin/c++  -I/mnt/d/Mywork/bitruss-decomposition-main/include -std=gnu++14 -o CMakeFiles/factory.dir/factory.cc.o -c /mnt/d/Mywork/bitruss-decomposition-main/src/factory/factory.cc",
+  "file": "/mnt/d/Mywork/bitruss-decomposition-main/src/factory/factory.cc",
   "output": "src/factory/CMakeFiles/factory.dir/factory.cc.o"
 }
 ]

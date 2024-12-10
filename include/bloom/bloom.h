@@ -37,6 +37,7 @@ public:
 
     void send_value_to_member(int deltaValue,
                               std::vector<long long> &matureList, Edge *edge);
+    void send_value_to_member_1(int bucket, std::vector<long long> &matureList, Edge *edge);
 
     void send_value_to_member(int deltaValue,
                               std::vector<long long> &matureList, Edge *edge,

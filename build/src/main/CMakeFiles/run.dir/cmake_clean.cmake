@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run"
-  "/mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/bin/run.pdb"
+  "/mnt/d/Mywork/bitruss-decomposition-main/bin/run"
+  "/mnt/d/Mywork/bitruss-decomposition-main/bin/run.pdb"
   "CMakeFiles/run.dir/main.cc.o"
   "CMakeFiles/run.dir/main.cc.o.d"
 )

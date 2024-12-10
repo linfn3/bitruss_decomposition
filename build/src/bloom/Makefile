@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main
+CMAKE_SOURCE_DIR = /mnt/d/Mywork/bitruss-decomposition-main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build
+CMAKE_BINARY_DIR = /mnt/d/Mywork/bitruss-decomposition-main/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/CMakeFiles /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/src/bloom//CMakeFiles/progress.marks
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bloom/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build/CMakeFiles 0
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Mywork/bitruss-decomposition-main/build/CMakeFiles /mnt/d/Mywork/bitruss-decomposition-main/build/src/bloom//CMakeFiles/progress.marks
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bloom/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/Mywork/bitruss-decomposition-main/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bloom/clean
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bloom/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bloom/preinstall
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bloom/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bloom/preinstall
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bloom/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/bloom/CMakeFiles/bloom.dir/rule:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bloom/CMakeFiles/bloom.dir/rule
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/bloom/CMakeFiles/bloom.dir/rule
 .PHONY : src/bloom/CMakeFiles/bloom.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ bloom: src/bloom/CMakeFiles/bloom.dir/rule
 
 # fast build rule for target.
 bloom/fast:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/bloom/CMakeFiles/bloom.dir/build.make src/bloom/CMakeFiles/bloom.dir/build
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/bloom/CMakeFiles/bloom.dir/build.make src/bloom/CMakeFiles/bloom.dir/build
 .PHONY : bloom/fast
 
 bloom.o: bloom.cc.o
@@ -135,7 +135,7 @@ bloom.o: bloom.cc.o
 
 # target to build an object file
 bloom.cc.o:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/bloom/CMakeFiles/bloom.dir/build.make src/bloom/CMakeFiles/bloom.dir/bloom.cc.o
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/bloom/CMakeFiles/bloom.dir/build.make src/bloom/CMakeFiles/bloom.dir/bloom.cc.o
 .PHONY : bloom.cc.o
 
 bloom.i: bloom.cc.i
@@ -143,7 +143,7 @@ bloom.i: bloom.cc.i
 
 # target to preprocess a source file
 bloom.cc.i:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/bloom/CMakeFiles/bloom.dir/build.make src/bloom/CMakeFiles/bloom.dir/bloom.cc.i
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/bloom/CMakeFiles/bloom.dir/build.make src/bloom/CMakeFiles/bloom.dir/bloom.cc.i
 .PHONY : bloom.cc.i
 
 bloom.s: bloom.cc.s
@@ -151,7 +151,7 @@ bloom.s: bloom.cc.s
 
 # target to generate assembly for a file
 bloom.cc.s:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/bloom/CMakeFiles/bloom.dir/build.make src/bloom/CMakeFiles/bloom.dir/bloom.cc.s
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(MAKE) $(MAKESILENT) -f src/bloom/CMakeFiles/bloom.dir/build.make src/bloom/CMakeFiles/bloom.dir/bloom.cc.s
 .PHONY : bloom.cc.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/d/Mywork/bitruss-decomposition-main/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

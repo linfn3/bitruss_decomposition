@@ -1,7 +1,7 @@
 src/graph/CMakeFiles/graph.dir/edge.cc.o: \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/src/graph/edge.cc \
+ /mnt/d/Mywork/bitruss-decomposition-main/src/graph/edge.cc \
  /usr/include/stdc-predef.h \
- /mnt/d/bitruss/bitruss-decomposition-main/bitruss-decomposition-main/include/graph/edge.h \
+ /mnt/d/Mywork/bitruss-decomposition-main/include/graph/edge.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

@@ -1,0 +1,50 @@
+[
+{
+  "directory": "D:/Mywork/bitruss-decomposition-main/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.4\\bin\\mingw\\bin\\G__~1.EXE -ID:/Mywork/bitruss-decomposition-main/include -g -std=gnu++14 -fdiagnostics-color=always -o src\\main\\CMakeFiles\\run.dir\\main.cc.obj -c D:\\Mywork\\bitruss-decomposition-main\\src\\main\\main.cc",
+  "file": "D:\\Mywork\\bitruss-decomposition-main\\src\\main\\main.cc",
+  "output": "src\\main\\CMakeFiles\\run.dir\\main.cc.obj"
+},
+{
+  "directory": "D:/Mywork/bitruss-decomposition-main/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.4\\bin\\mingw\\bin\\G__~1.EXE -ID:/Mywork/bitruss-decomposition-main/include -g -std=gnu++14 -fdiagnostics-color=always -o src\\utils\\CMakeFiles\\utils.dir\\current_time.cc.obj -c D:\\Mywork\\bitruss-decomposition-main\\src\\utils\\current_time.cc",
+  "file": "D:\\Mywork\\bitruss-decomposition-main\\src\\utils\\current_time.cc",
+  "output": "src\\utils\\CMakeFiles\\utils.dir\\current_time.cc.obj"
+},
+{
+  "directory": "D:/Mywork/bitruss-decomposition-main/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.4\\bin\\mingw\\bin\\G__~1.EXE -ID:/Mywork/bitruss-decomposition-main/include -g -std=gnu++14 -fdiagnostics-color=always -o src\\utils\\CMakeFiles\\utils.dir\\flags.cc.obj -c D:\\Mywork\\bitruss-decomposition-main\\src\\utils\\flags.cc",
+  "file": "D:\\Mywork\\bitruss-decomposition-main\\src\\utils\\flags.cc",
+  "output": "src\\utils\\CMakeFiles\\utils.dir\\flags.cc.obj"
+},
+{
+  "directory": "D:/Mywork/bitruss-decomposition-main/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.4\\bin\\mingw\\bin\\G__~1.EXE -ID:/Mywork/bitruss-decomposition-main/include -g -std=gnu++14 -fdiagnostics-color=always -o src\\graph\\CMakeFiles\\graph.dir\\edge.cc.obj -c D:\\Mywork\\bitruss-decomposition-main\\src\\graph\\edge.cc",
+  "file": "D:\\Mywork\\bitruss-decomposition-main\\src\\graph\\edge.cc",
+  "output": "src\\graph\\CMakeFiles\\graph.dir\\edge.cc.obj"
+},
+{
+  "directory": "D:/Mywork/bitruss-decomposition-main/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.4\\bin\\mingw\\bin\\G__~1.EXE -ID:/Mywork/bitruss-decomposition-main/include -g -std=gnu++14 -fdiagnostics-color=always -o src\\graph\\CMakeFiles\\graph.dir\\graph.cc.obj -c D:\\Mywork\\bitruss-decomposition-main\\src\\graph\\graph.cc",
+  "file": "D:\\Mywork\\bitruss-decomposition-main\\src\\graph\\graph.cc",
+  "output": "src\\graph\\CMakeFiles\\graph.dir\\graph.cc.obj"
+},
+{
+  "directory": "D:/Mywork/bitruss-decomposition-main/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.4\\bin\\mingw\\bin\\G__~1.EXE -ID:/Mywork/bitruss-decomposition-main/include -g -std=gnu++14 -fdiagnostics-color=always -o src\\graph\\CMakeFiles\\graph.dir\\graph_batch.cc.obj -c D:\\Mywork\\bitruss-decomposition-main\\src\\graph\\graph_batch.cc",
+  "file": "D:\\Mywork\\bitruss-decomposition-main\\src\\graph\\graph_batch.cc",
+  "output": "src\\graph\\CMakeFiles\\graph.dir\\graph_batch.cc.obj"
+},
+{
+  "directory": "D:/Mywork/bitruss-decomposition-main/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.4\\bin\\mingw\\bin\\G__~1.EXE -ID:/Mywork/bitruss-decomposition-main/include -g -std=gnu++14 -fdiagnostics-color=always -o src\\bloom\\CMakeFiles\\bloom.dir\\bloom.cc.obj -c D:\\Mywork\\bitruss-decomposition-main\\src\\bloom\\bloom.cc",
+  "file": "D:\\Mywork\\bitruss-decomposition-main\\src\\bloom\\bloom.cc",
+  "output": "src\\bloom\\CMakeFiles\\bloom.dir\\bloom.cc.obj"
+},
+{
+  "directory": "D:/Mywork/bitruss-decomposition-main/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.4\\bin\\mingw\\bin\\G__~1.EXE -ID:/Mywork/bitruss-decomposition-main/include -g -std=gnu++14 -fdiagnostics-color=always -o src\\factory\\CMakeFiles\\factory.dir\\factory.cc.obj -c D:\\Mywork\\bitruss-decomposition-main\\src\\factory\\factory.cc",
+  "file": "D:\\Mywork\\bitruss-decomposition-main\\src\\factory\\factory.cc",
+  "output": "src\\factory\\CMakeFiles\\factory.dir\\factory.cc.obj"
+}
+]
