@@ -27,6 +27,7 @@ class Edge {
     int slackValue{0};
     int accumulatedValue{0};
 
+
     std::vector<int> hostBloom;
     std::vector<long long> twinEdge;
     std::vector<pair_t> reverseIndexInHostBloom;
@@ -37,7 +38,8 @@ class Edge {
   public:
     long long id{0};
     int node1, node2;
-
+    bool isDT{true};
+    bool isPeel{false};
     Edge() {}
 
     Edge(long long _id) : id(_id) {}
@@ -76,7 +78,14 @@ class Edge {
         const ui index) {
         return reverseIndexInHostBloom[index];
     }
-
+    inline bool check_maturity() {
+        if (accumulatedValue < targetValue) {
+            return false;
+        } else {
+            accumulatedValue = 0;
+            return true;
+        }
+    }
     inline const TwinInfo get_twin_edge_info_by_index(const ui index) {
         return TwinInfo(twinEdge[index], hostBloomIndexInTwin[index]);
     }
@@ -91,7 +100,7 @@ class Edge {
 
     inline void accumulate_value(const int value) { accumulatedValue += value; }
 
-    bool check_maturity();
+
 
     affect_bloom_t remove_host_bloom_by_index(ui index);
 

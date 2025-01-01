@@ -25,13 +25,13 @@ Graph::Graph(const std::string path) {
     m /= 2;
     edge = new Edge[m];
     bitrussNumber = new int[m];
-    isInPeelList = new char[m];
+    //isInPeelList = new char[m];
     edgeToPeel = m;
     for (long long i = 0; i < m; i++) {
         edge[i].id = i;
     }
     std::memset(bitrussNumber, 0, sizeof(int) * m);
-    std::memset(isInPeelList, 0, sizeof(char) * m);
+    //std::memset(isInPeelList, 0, sizeof(char) * m);
 }
 
 Graph::~Graph() {
@@ -75,6 +75,8 @@ void Graph::construct_index() {
     std::cout << std::fixed << std::setprecision(6)
               << "Edge ID assignment time:\t" << get_current_time() - start
               << "sec\n";
+
+
     std::vector<int> bloomNumber;
     int u, v, w;
     int *lastUseVertex = new int[n], *lastCount = new int[n],
@@ -84,8 +86,8 @@ void Graph::construct_index() {
 
     int **butterflyCount = new int *[n];
     for (int i = 0; i < n; i++) {
-        butterflyCount[i] = new int[degree[i]];
-        std::memset(butterflyCount[i], 0, sizeof(int) * degree[i]);
+        butterflyCount[i] = new int[degree[i]]();
+
     }
     start = get_current_time();
     int lastUseIdx = 0;
@@ -98,6 +100,7 @@ void Graph::construct_index() {
 
         for (int i = 0; i < degree[u]; i++) {
             v = nbr[u][i];
+            //if (degree[v] > degree[u]) continue;
             for (int j = 0; j < degree[v]; j++) {
                 w = nbr[v][j];
                 if (w >= u || w >= v)
@@ -109,6 +112,7 @@ void Graph::construct_index() {
         }
         for (int i = 0; i < degree[u]; i++) {
             v = nbr[u][i];
+            //if (degree[v] > degree[u]) continue;
             for (int j = 0; j < degree[v]; j++) {
                 w = nbr[v][j];
                 if (w >= u || w >= v)
@@ -138,6 +142,8 @@ void Graph::construct_index() {
                     edge[e[v][j]].add_host_bloom_index_of_twin_edge(indexV);
                 }
             }
+            //edge[e[u][i]].add_butterfly_support(butterflyCount[u][i]);
+
         }
     }
 
@@ -158,8 +164,9 @@ void Graph::construct_index() {
         bloom[i].bloomNumber = bloomNumber[i];
         bloom[i].initialize_space();
     }
-    bloomNumber.clear();
-    bloomNumber.shrink_to_fit();
+
+// 处理所有的edge，更新它们的蝴蝶支持信息
+
     for (u = 0; u < n; u++) {
         for (int i = 0; i < degree[u]; i++) {
             edge[e[u][i]].add_butterfly_support(butterflyCount[u][i]);
@@ -168,35 +175,45 @@ void Graph::construct_index() {
 
     int maxSlackValue = 0;
     int maxButterflySupport = 0;
+
+// 计算最大Slack值和最大蝴蝶支持
     for (long long i = 0; i < m; i++) {
-        if (edge[i].get_butterfly_support() == 0) {
+        auto& currentEdge = edge[i];
+        int butterflySupport = currentEdge.get_butterfly_support();
+        if (butterflySupport == 0) {
             edgeToPeel--;
             continue;
         }
-        auto *currentEdge = &edge[i];
-        currentEdge->compute_slack_value();
-        int slackValue = currentEdge->get_slack_value();
-        maxSlackValue = std::max(maxSlackValue, currentEdge->get_slack_value());
-        maxButterflySupport =
-                std::max(maxButterflySupport, currentEdge->get_butterfly_support());
+
+        currentEdge.compute_slack_value();
+        maxButterflySupport = std::max(maxButterflySupport, butterflySupport);
+        int slackValue = currentEdge.get_slack_value();
+        maxSlackValue = std::max(maxSlackValue, slackValue);
+
     }
+
     extraBloom.id = bloomCount;
     extraBloom.bloomNumber = maxButterflySupport;
-    std::cout<<"maxButterflySupport:"<<maxButterflySupport<<std::endl;
+    //std::cout << "maxButterflySupport:" << maxButterflySupport << std::endl;
     extraBloom.initialize_space_member_edge_only();
+
     for (long long i = 0; i < m; i++) {
-        if (edge[i].get_butterfly_support() == 0) {
+        auto& currentEdge = edge[i];
+        int butterflySupport = currentEdge.get_butterfly_support();
+        if (butterflySupport == 0) {
             continue;
         }
-        auto *currentEdge = &edge[i];
-        for (int j = 0; j < currentEdge->get_host_bloom_number(); j++) {
-            int bloomID = currentEdge->get_host_bloom_id_by_index(j);
+
+        for (int j = 0; j < currentEdge.get_host_bloom_number(); j++) {
+            int bloomID = currentEdge.get_host_bloom_id_by_index(j);
             pair_t index = bloom[bloomID].add_member_edge(i, j, edge);
-            currentEdge->add_reverse_index_in_host_bloom(index);
+            currentEdge.add_reverse_index_in_host_bloom(index);
         }
+
         pair_t index = extraBloom.add_member_edge(i, edge);
-        currentEdge->set_reverse_index_in_extra_bloom(index);
+        currentEdge.set_reverse_index_in_extra_bloom(index);
     }
+
     std::cout << std::fixed << std::setprecision(6)
               << "Index construction time:\t" << get_current_time() - start
               << "sec\n";
@@ -211,13 +228,13 @@ void Graph::construct_index() {
 }
 
 void Graph::remove_edge_from_bloom_by_index(int bloomID, pair_t index) {
-    affect_edge_t affectEdgeInfo = bloom[bloomID].remove_member_by_index(index);
+    affect_edge_t affectEdgeInfo = bloom[bloomID].remove_member_by_index(index);//影响的edge和对应的bloom index
     if (affectEdgeInfo.first == -1) {
         return;
     } else {
         long long affectEdgeID = affectEdgeInfo.first;
         ui affectIndex = affectEdgeInfo.second;
-        edge[affectEdgeID].set_reverse_index_by_index(affectIndex, index);
+        edge[affectEdgeID].set_reverse_index_by_index(affectIndex, index);//把原来边的位置替换
     }
 }
 
@@ -238,27 +255,13 @@ void Graph::remove_bloom_from_edge_by_index(long long edgeID, ui index) {
     } else {
         if (std::get<1>(affectBloomInfo).first != -1)
             bloom[std::get<0>(affectBloomInfo)].set_reverse_index_by_index(
-                    std::get<1>(affectBloomInfo), index);
+                    std::get<1>(affectBloomInfo), index);//变更bloom对应的edge的bloomindex
         edge[std::get<2>(affectBloomInfo)].set_twin_index_by_index(
                 std::get<3>(affectBloomInfo), index);
     }
 }
 
 void Graph::bitruss_decomposition() {
-    /*
-    std::ofstream fout;
-    fout.open("../dataset/marvel/temp.txt", std::ios::out);
-    for(int i = 0;i < bloomCount;i++){
-        fout<<"bloomid:"<<bloom[i].id<<", size:"<<bloom[i].bloomNumber<<std::endl;
-    }
-
-    fout.close();
-    fout.open("../dataset/marvel/temp2.txt", std::ios::out);
-    for(int i = 0;i < m;i++){
-        fout<<"edgeID:"<<i<<", size:"<<edge[i].get_butterfly_support()<<" ,hostbloom:"<<edge[i].get_host_bloom_number()<<std::endl;
-    }
-    fout.close();
-    */
     long long visitedEdge = 0;
     std::vector<long long> peelList;
     std::vector<long long> peelListTmp;
@@ -267,7 +270,7 @@ void Graph::bitruss_decomposition() {
     std::cout << "bitruss decomposing..." << std::endl;
     while (visitedEdge < edgeToPeel) {
         if (peelList.empty()) {
-            extraBloom.send_value_to_member(1, matureList, edge);
+            extraBloom.send_value_to_member( matureList, peelList,edge);
             extraBloom.increse_counter(1);
             for (ui i = 0; i < matureList.size(); i++) {
                 long long edgeID = matureList[i];
@@ -307,6 +310,7 @@ void Graph::peel_edge(long long edgeID, std::vector<long long> &peelList) {
         int bloomNumber = currentBloom->bloomNumber;
         long long twinEdgeID = twinEdgeInfo.twinEdgeID;
         // remove peel edge from current bloom
+
         remove_edge_from_bloom_by_index(bloomID, reverseIndex);
 
         ui indexInTwinEdge = twinEdgeInfo.hostBloomIndex;
@@ -336,8 +340,7 @@ void Graph::peel_edge(long long edgeID, std::vector<long long> &peelList) {
 
         currentBloom->bloomNumber--;
         std::vector<long long> matureList;
-        int bucket = log2_32(currentBloom->get_counter()+1);
-        currentBloom->send_value_to_member_1(bucket,matureList, edge);
+        currentBloom->send_value_to_member(matureList, peelList, edge);
         currentBloom->increse_counter(1);
         for (ui j = 0; j < matureList.size(); j++) {
             long long currentEdgeID = matureList[j];
@@ -373,12 +376,12 @@ void Graph::compute_and_restart(long long edgeID, const int trackValue) {
 
 void Graph::check_mature_edge(long long edgeID,
                               std::vector<long long> &peelList) {
-    if (isInPeelList[edgeID])
+    if (edge[edgeID].isPeel)
         return;
     int counterSum = collect_counter(edgeID);
     if (counterSum + extraBloom.get_counter() >=
         edge[edgeID].get_butterfly_support()) {
-        isInPeelList[edgeID] = 1;
+        edge[edgeID].isPeel = true;
         peelList.emplace_back(edgeID);
     } else {
         compute_and_restart(edgeID, edge[edgeID].get_butterfly_support() -

@@ -21,38 +21,25 @@ ui Edge::add_host_bloom_and_twin_edge(int bloomID, long long twinEdgeID) {
 void Edge::compute_slack_value() {
     ui hostNumber = hostBloom.size() + 1;
     slackValue = butterflySupport / 2 / hostNumber;
-    if (slackValue == 0) {
-        slackValue = 1;
-    }
-    if (slackValue == 1) {
+    if(slackValue <=3){
+        isDT = false;
         targetValue = butterflySupport;
-    } else {
-        targetValue = hostNumber;
     }
+    else targetValue = hostNumber;
+
 }
 
 void Edge::compute_slack_value(const int _target) {
-    targetValue = _target;
     int hostNumber = (int)hostBloom.size() + 1;
     slackValue = _target / 2 / hostNumber;
-    if (slackValue == 0) {
-        slackValue = 1;
-    }
-    if (slackValue == 1) {
+    if(slackValue <=3){
+        isDT = false;
         targetValue = _target;
-    } else {
-        targetValue = hostNumber;
     }
+    else targetValue = hostNumber;
 }
 
-bool Edge::check_maturity() {
-    if (accumulatedValue < targetValue) {
-        return false;
-    } else {
-        accumulatedValue = 0;
-        return true;
-    }
-}
+
 
 affect_bloom_t Edge::remove_host_bloom_by_index(ui index) {
     ui hostNumber = hostBloom.size();

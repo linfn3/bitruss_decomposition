@@ -10,12 +10,15 @@ class Bloom {
 private:
     int counter{0};
     int maxSize{0};
-    std::vector<std::vector<long long>> memberEdge;
+    //std::vector<std::vector<long long>> memberEdge;
     std::vector<std::vector<ui>> reverseIndexInMemberEdge;
+    std::vector<long long>NoDT_member;
 
 public:
+    std::vector<std::vector<long long>> memberEdge;
     int id{0};
     int bloomNumber{0};
+    bool bigBloom{true};
 
     Bloom() {}
 
@@ -35,9 +38,8 @@ public:
 
     pair_t add_member_edge(long long edgeID, Edge *edge);
 
-    void send_value_to_member(int deltaValue,
-                              std::vector<long long> &matureList, Edge *edge);
-    void send_value_to_member_1(int bucket, std::vector<long long> &matureList, Edge *edge);
+    void send_value_to_member(std::vector<long long> &matureList, std::vector<long long> &peelList,Edge *edge);
+    //void send_value_to_member_1(int bucket, std::vector<long long> &matureList, Edge *edge);
 
     void send_value_to_member(int deltaValue,
                               std::vector<long long> &matureList, Edge *edge,

@@ -23,7 +23,7 @@ protected:
     int **nbr{nullptr};
 
     int *bitrussNumber{nullptr};
-    char *isInPeelList{nullptr};
+    //char *isInPeelList{nullptr};
 
     Edge *edge{nullptr};
     Bloom *bloom{nullptr};
