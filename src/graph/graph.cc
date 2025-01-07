@@ -112,7 +112,6 @@ void Graph::construct_index() {
         }
         for (int i = 0; i < degree[u]; i++) {
             v = nbr[u][i];
-            //if (degree[v] > degree[u]) continue;
             for (int j = 0; j < degree[v]; j++) {
                 w = nbr[v][j];
                 if (w >= u || w >= v)
@@ -128,7 +127,7 @@ void Graph::construct_index() {
                             bloomCount, e[v][j]);
                     ui indexU = edge[e[v][j]].add_host_bloom_and_twin_edge(
                             bloomCount, e[u][i]);
-                    edge[e[u][i]].add_host_bloom_index_of_twin_edge(indexU);
+                    edge[e[u][i]].add_host_bloom_index_of_twin_edge(indexU);//twin edge所对应的bloom所在的索引
                     edge[e[v][j]].add_host_bloom_index_of_twin_edge(indexV);
                     bloomNumber.emplace_back(lastCountNumber);
                     visitedStatusForW[w] = bloomCount++;
@@ -271,7 +270,7 @@ void Graph::bitruss_decomposition() {
     while (visitedEdge < edgeToPeel) {
         if (peelList.empty()) {
             extraBloom.send_value_to_member( matureList, peelList,edge);
-            extraBloom.increse_counter(1);
+            //extraBloom.increse_counter(1);
             for (ui i = 0; i < matureList.size(); i++) {
                 long long edgeID = matureList[i];
                 check_mature_edge(edgeID, peelList);
@@ -341,7 +340,7 @@ void Graph::peel_edge(long long edgeID, std::vector<long long> &peelList) {
         currentBloom->bloomNumber--;
         std::vector<long long> matureList;
         currentBloom->send_value_to_member(matureList, peelList, edge);
-        currentBloom->increse_counter(1);
+        //currentBloom->increse_counter(1);
         for (ui j = 0; j < matureList.size(); j++) {
             long long currentEdgeID = matureList[j];
             check_mature_edge(currentEdgeID, peelList);

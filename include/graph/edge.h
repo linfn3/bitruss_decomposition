@@ -28,9 +28,9 @@ class Edge {
     int accumulatedValue{0};
 
 
-    std::vector<int> hostBloom;
+    std::vector<int> hostBloom;// bloom id
     std::vector<long long> twinEdge;
-    std::vector<pair_t> reverseIndexInHostBloom;
+    std::vector<pair_t> reverseIndexInHostBloom; //x:bucket（） index y: 该bucket里面的第几个元素
     std::vector<ui> hostBloomIndexInTwin;
 
     pair_t reverseIndexInExtraBloom;

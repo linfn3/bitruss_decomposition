@@ -46,7 +46,7 @@ pair_t Bloom::add_member_edge(long long edgeID, ui indexInMemberEdge,
     int slackValue = edge[edgeID].get_slack_value();
     if (slackValue >= bloomNumber)
         return std::make_pair(-1, 0);
-    int bucket = log2_32(slackValue+counter);
+    int bucket = log2_32(slackValue);// edge future value：slackValue+counter
     memberEdge[bucket].emplace_back(edgeID);
     reverseIndexInMemberEdge[bucket].emplace_back(indexInMemberEdge);
     return std::make_pair(bucket, memberEdge[bucket].size() - 1);
@@ -61,77 +61,49 @@ pair_t Bloom::add_member_edge(long long edgeID, Edge *edge) {
     int slackValue = edge[edgeID].get_slack_value();
     if (slackValue >= bloomNumber)
         return std::make_pair(-1, 0);
-    int bucket = log2_32(slackValue+counter);
+    int bucket = log2_32(slackValue);
     memberEdge[bucket].emplace_back(edgeID);
     return std::make_pair(bucket, memberEdge[bucket].size() - 1);
 }
 
 void Bloom::send_value_to_member(std::vector<long long> &matureList, std::vector<long long> &peelList,
                                  Edge *edge) {
-    for(int i = 0;i < memberEdge[0].size();i++){
+    counter++;  // Increment counter first
+
+    // Step 1: Process all elements in bucket 0
+    for (int i = 0; i < memberEdge[0].size(); i++) {
         long long edgeID = memberEdge[0][i];
         edge[edgeID].accumulate_value(1);
-        if(edge[edgeID].check_maturity()){
-            //if (edge[edgeID].isPeel)continue;
-
+        if (edge[edgeID].check_maturity()) {
             edge[edgeID].isPeel = true;
             peelList.emplace_back(edgeID);
-
         }
     }
-    int bucket = 1;
-    int bucketValue = 2;
-    int temp = counter + 1;
-    while (bucket < maxSize) {
-        int base = counter / bucketValue;
-        if (memberEdge[bucket].empty()) {
-            bucket++;
-            bucketValue <<= 1;
-            continue;
-        }
-        if ( temp < bucketValue) {
-            break;
-        }
-        if(temp == bucketValue){
-            for (ui i = 0; i < memberEdge[bucket].size(); i++) {
-                long long edgeID = memberEdge[bucket][i];
-                /*
-                if(edgeID == 1 && id == 0){
-                    std::cout<<"slackValue"<<edge[edgeID].get_slack_value()<<" counter:"<<counter<< " BloomID:"<<id<<" bucket:"<<bucket <<endl;
-                }
-                 */
 
-                edge[edgeID].accumulate_value(1);
-                if (edge[edgeID].check_maturity()) {
-                    matureList.emplace_back(edgeID);
-                }
+    // Step 2: Process buckets based on binary representation of counter
+    int temp = counter >> 2;  // Right shift once to start from the second bit (bucket = 1)
+    int bucket = 1;  // Start processing from bucket 1
 
-            }
-            break;
-        }
-        for (ui i = 0; i < memberEdge[bucket].size(); i++) {
-            long long edgeID = memberEdge[bucket][i];
-            /*
-            if(edgeID == 1 && id == 0){
-                std::cout<<"slackValue"<<edge[edgeID].get_slack_value()<<" counter:"<<counter<< " BloomID:"<<id<<" bucket:"<<bucket <<endl;
-            }
-             */
-            if((temp-bucketValue)%edge[edgeID].get_slack_value() == 0) {
-                /*
-                if(edgeID == 1 && id == 0){
-                    std::cout<<"slackValue"<<edge[edgeID].get_slack_value()<<" counter:"<<counter<< " BloomID:"<<id<<" bucket:"<<bucket <<endl;
-                }
-                */
+    // Process each bucket based on the binary representation of counter
+    while (temp) {
+        if (temp & 1) {  // If the current bit is 1, process the corresponding bucket
+            for (long long edgeID : memberEdge[bucket]) {
                 edge[edgeID].accumulate_value(1);
                 if (edge[edgeID].check_maturity()) {
                     matureList.emplace_back(edgeID);
                 }
             }
         }
-        bucket++;
-        bucketValue <<= 1;
+        bucket++;  // Move to the next bucket
+        temp >>= 1;  // Right shift to check the next bit
     }
 }
+
+/*
+if(edgeID == 1 && id == 0){
+    std::cout<<"slackValue"<<edge[edgeID].get_slack_value()<<" counter:"<<counter<< " BloomID:"<<id<<" bucket:"<<bucket <<endl;
+}
+*/
 
 void Bloom::send_value_to_member(int deltaValue,
                                  std::vector<long long> &matureList, Edge *edge,
@@ -175,10 +147,7 @@ void Bloom::send_value_to_member(int deltaValue, pair_t index, Edge *edge) {
         return;
     }
     int bucketValue = pow2[bucket];
-    int base = counter / bucketValue;
-    if (counter + deltaValue < (base + 1) * bucketValue) {
-        return;
-    }
+
     int sendValue = 1 + (counter + deltaValue - bucketValue)/edge[edgeID].get_slack_value();
 
     //if(edgeID == 1 && id == 0) cout<<"memberEdge.size:"<<memberEdge.size()<<" memberEdge[0].size:"<<memberEdge[0].size()<<" index.first"<<index.first<<" index.second"<<index.second<<endl;
