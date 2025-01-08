@@ -68,7 +68,8 @@ pair_t Bloom::add_member_edge(long long edgeID, Edge *edge) {
 
 void Bloom::send_value_to_member(std::vector<long long> &matureList, std::vector<long long> &peelList,
                                  Edge *edge) {
-    counter++;  // Increment counter first
+    int old_counter = counter;  // Store the old counter
+    counter++;  // Increment counter
 
     // Step 1: Process all elements in bucket 0
     for (int i = 0; i < memberEdge[0].size(); i++) {
@@ -79,23 +80,29 @@ void Bloom::send_value_to_member(std::vector<long long> &matureList, std::vector
             peelList.emplace_back(edgeID);
         }
     }
+    if(counter <= 3){
+        return;
+    }
+    // Step 2: Check the difference between old_counter and new counter
+    int diff = old_counter ^ counter;  // XOR to find the bit positions that changed
+    int bucket = 2;  // Start processing from bucket 2 (right to left third bit)
 
-    // Step 2: Process buckets based on binary representation of counter
-    int temp = counter >> 2;  // Right shift once to start from the second bit (bucket = 1)
-    int bucket = 1;  // Start processing from bucket 1
-
-    // Process each bucket based on the binary representation of counter
-    while (temp) {
-        if (temp & 1) {  // If the current bit is 1, process the corresponding bucket
+    // Process each bucket where the corresponding bit in diff is 1
+    diff >>= 2;
+    while (diff) {
+        //cout<<"counter:"<<counter<<" old counter:"<<old_counter<<" diff:"<<diff<<endl;
+        if (diff & 1) {  // If the current bit is 1, process the corresponding bucket
             for (long long edgeID : memberEdge[bucket]) {
+                //std::cout<<"slackValue"<<edge[edgeID].get_slack_value()<<" counter:"<<counter<< " BloomID:"<<id<<" bucket:"<<bucket <<endl;
                 edge[edgeID].accumulate_value(1);
+                //std::cout<<"slackValue"<<edge[edgeID].get_slack_value()<<" counter:"<<counter<< " BloomID:"<<id<<" bucket:"<<bucket <<endl;
                 if (edge[edgeID].check_maturity()) {
                     matureList.emplace_back(edgeID);
                 }
             }
         }
         bucket++;  // Move to the next bucket
-        temp >>= 1;  // Right shift to check the next bit
+        diff >>= 1;  // Right shift to check the next bit
     }
 }
 
